@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Music App</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <h2>🎧 Music Player</h2>
+    <div>
+        <b id="activeUser"></b>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="Auth.logout()">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="box">
+        <h3>Upload New Song</h3>
+
+        <input type="file" id="songFile" accept="audio/*">
+        <button class="btn" onclick="Music.upload()">Upload</button>
+
+        <p id="uploadMsg" class="msg"></p>
+    </div>
+
+    <div class="box">
+        <h3>Your Playlist</h3>
+        <ul id="songList"></ul>
+    </div>
+
+    <audio id="player" controls></audio>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
